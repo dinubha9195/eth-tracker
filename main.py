@@ -18,7 +18,7 @@ ENTRY_IDS = {
     "price": "entry.2030424992",
     "change": "entry.1319672427"
 }
-ALERT_PERCENTAGE = 2.0 
+ALERT_PERCENTAGE = 0.01 
 
 # ==========================================
 # 🛑 YAHAN APNI DETAILS DAALEIN 🛑
