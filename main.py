@@ -18,7 +18,7 @@ ENTRY_IDS = {
     "price": "entry.2030424992",
     "change": "entry.1319672427"
 }
-ALERT_PERCENTAGE = 2.0 
+ALERT_PERCENTAGE = 0.01 
 
 # ==========================================
 # 🛑 YAHAN APNI DETAILS DAALEIN 🛑
@@ -53,7 +53,8 @@ def send_email_alert(subject, body):
         msg['From'] = SENDER_EMAIL
         msg['To'] = RECEIVER_EMAIL
         
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
         server.login(SENDER_EMAIL, EMAIL_APP_PASSWORD)
         server.send_message(msg)
         server.quit()
